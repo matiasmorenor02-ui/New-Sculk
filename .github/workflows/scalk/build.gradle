@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.+'
+}
+
+group = 'com.scalk'
+version = project.mod_version
+
+base {
+    archivesName = 'scalk'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+repositories {
+    mavenLocal()
+}
+
+neoForge {
+    version = project.neo_version
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+    }
+
+    mods {
+        scalk {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    // TerraBlender (el jar que ya tenias). Se usa para compilar y para ejecutar en desarrollo.
+    implementation files('libs/TerraBlender-neoforge-26_3-26_3_0_0_9.jar')
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [version: project.version]
+    inputs.properties replaceProperties
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand replaceProperties
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
