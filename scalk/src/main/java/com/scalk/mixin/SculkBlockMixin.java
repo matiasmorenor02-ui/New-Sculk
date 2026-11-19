@@ -1,6 +1,6 @@
 package com.scalk.mixin;
 
-import com.llamalad7.mixinextras.injector.v2.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.scalk.ScalkContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SculkBlock;
