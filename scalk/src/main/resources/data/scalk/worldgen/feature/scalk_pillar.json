@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:random_selector",
+  "default": "scalk:scalk_pillar_small_b",
+  "features": [
+    {
+      "chance": 0.08,
+      "feature": "scalk:scalk_pillar_large"
+    },
+    {
+      "chance": 0.25,
+      "feature": "scalk:scalk_pillar_medium_a"
+    },
+    {
+      "chance": 0.25,
+      "feature": "scalk:scalk_pillar_medium_b"
+    },
+    {
+      "chance": 0.5,
+      "feature": "scalk:scalk_pillar_small_a"
+    }
+  ]
+}
