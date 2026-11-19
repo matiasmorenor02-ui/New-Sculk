@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mixins]]
+config = "scalk.mixins.json"
+
+[[mods]]
+modId = "scalk"
+version = "${version}"
+displayName = "Scalk"
+description = '''
+Un bosque de abedules (basado en el old growth birch forest) corrompido por scalk,
+el sculk marron-morado. Madera y hojas drenadas, parches largos de scalk y venas sobre los troncos.
+'''
+
+[[dependencies.scalk]]
+modId = "neoforge"
+type = "required"
+versionRange = "[26.3,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.scalk]]
+modId = "terrablender"
+type = "required"
+versionRange = "[26.3,)"
+ordering = "AFTER"
+side = "BOTH"

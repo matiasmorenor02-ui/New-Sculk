@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.scalk.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SculkBehaviourDefaultMixin",
+    "SculkBlockMixin",
+    "SculkPatchFeatureMixin",
+    "SculkSpreaderMixin",
+    "SculkVeinBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8.4"
+}

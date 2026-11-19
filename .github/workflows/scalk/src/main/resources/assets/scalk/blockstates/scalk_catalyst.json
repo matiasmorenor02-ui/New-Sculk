@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "bloom=false": {
+      "model": "scalk:block/scalk_catalyst"
+    },
+    "bloom=true": {
+      "model": "scalk:block/scalk_catalyst_bloom"
+    }
+  }
+}

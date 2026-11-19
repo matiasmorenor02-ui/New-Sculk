@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:multiface_growth",
+  "block": "scalk:scalk_vein",
+  "can_be_placed_on": [
+    "scalk:drained_birch_log"
+  ],
+  "can_place_on_ceiling": false,
+  "can_place_on_floor": false,
+  "can_place_on_wall": true,
+  "chance_of_spreading": 0.9,
+  "search_range": 10
+}

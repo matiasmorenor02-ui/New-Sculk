@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "default": "scalk:drained_birch",
+  "features": [
+    {
+      "chance": 0.00625,
+      "feature": "scalk:fallen_drained_super_birch_tree"
+    },
+    {
+      "chance": 0.5,
+      "feature": "scalk:drained_super_birch"
+    },
+    {
+      "chance": 0.0125,
+      "feature": "scalk:fallen_drained_birch_tree"
+    }
+  ]
+}

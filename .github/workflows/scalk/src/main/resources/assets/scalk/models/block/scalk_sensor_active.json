@@ -1,0 +1,6 @@
+{
+    "parent": "scalk:block/scalk_sensor",
+    "textures": {
+        "tendrils": "scalk:block/scalk_sensor_tendril_active"
+    }
+}

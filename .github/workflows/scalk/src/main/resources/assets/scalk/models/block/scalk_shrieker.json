@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/template_sculk_shrieker",
+  "textures": {
+    "bottom": "scalk:block/scalk_shrieker_bottom",
+    "inner_top": "scalk:block/scalk_shrieker_inner_top",
+    "particle": "scalk:block/scalk_shrieker_bottom",
+    "side": "scalk:block/scalk_shrieker_side",
+    "top": "scalk:block/scalk_shrieker_top"
+  }
+}

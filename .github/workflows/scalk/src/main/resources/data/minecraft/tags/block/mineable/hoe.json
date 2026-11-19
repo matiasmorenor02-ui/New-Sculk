@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "scalk:scalk",
+    "scalk:scalk_vein",
+    "scalk:scalk_catalyst",
+    "scalk:scalk_sensor",
+    "scalk:scalk_shrieker",
+    "scalk:drained_birch_leaves"
+  ]
+}

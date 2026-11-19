@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "sculk_sensor_phase=active": {
+      "model": "scalk:block/scalk_sensor_active"
+    },
+    "sculk_sensor_phase=cooldown": {
+      "model": "scalk:block/scalk_sensor_active"
+    },
+    "sculk_sensor_phase=inactive": {
+      "model": "scalk:block/scalk_sensor_inactive"
+    }
+  }
+}

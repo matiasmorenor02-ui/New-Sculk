@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "scalk:scalk_sensor",
+    "scalk:scalk_shrieker"
+  ]
+}

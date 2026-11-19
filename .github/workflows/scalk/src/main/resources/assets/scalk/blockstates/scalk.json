@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "scalk:block/scalk"
+      },
+      {
+        "model": "scalk:block/scalk_mirrored"
+      },
+      {
+        "model": "scalk:block/scalk",
+        "y": 180
+      },
+      {
+        "model": "scalk:block/scalk_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}
