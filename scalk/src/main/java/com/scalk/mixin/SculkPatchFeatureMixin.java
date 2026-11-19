@@ -19,10 +19,12 @@ public abstract class SculkPatchFeatureMixin {
                                               BlockPos origin, Operation<Boolean> original) {
         boolean inScalkBiome = level.getBiome(origin).is(ScalkBiomes.SCALK_FOREST);
         boolean previous = ScalkContext.set(inScalkBiome || ScalkContext.isActive());
+        boolean previousWorldgen = ScalkContext.setWorldgen(inScalkBiome || ScalkContext.isWorldgen());
         try {
             return original.call(level, generator, random, origin);
         } finally {
             ScalkContext.set(previous);
+            ScalkContext.setWorldgen(previousWorldgen);
         }
     }
 }
