@@ -19,22 +19,22 @@ public final class ScalkBlocks {
 
     // --- Scalk: mismas propiedades que el sculk original, comportamiento heredado de las clases vanilla
     public static final DeferredBlock<ScalkBlock> SCALK =
-            BLOCKS.registerBlock("scalk", ScalkBlock::new, Properties.ofFullCopy(Blocks.SCULK));
+            BLOCKS.registerBlock("scalk", ScalkBlock::new, () -> Properties.ofFullCopy(Blocks.SCULK));
     public static final DeferredBlock<ScalkVeinBlock> SCALK_VEIN =
-            BLOCKS.registerBlock("scalk_vein", ScalkVeinBlock::new, Properties.ofFullCopy(Blocks.SCULK_VEIN));
+            BLOCKS.registerBlock("scalk_vein", ScalkVeinBlock::new, () -> Properties.ofFullCopy(Blocks.SCULK_VEIN));
     public static final DeferredBlock<SculkCatalystBlock> SCALK_CATALYST =
-            BLOCKS.registerBlock("scalk_catalyst", SculkCatalystBlock::new, Properties.ofFullCopy(Blocks.SCULK_CATALYST));
+            BLOCKS.registerBlock("scalk_catalyst", SculkCatalystBlock::new, () -> Properties.ofFullCopy(Blocks.SCULK_CATALYST));
     public static final DeferredBlock<SculkSensorBlock> SCALK_SENSOR =
-            BLOCKS.registerBlock("scalk_sensor", SculkSensorBlock::new, Properties.ofFullCopy(Blocks.SCULK_SENSOR));
+            BLOCKS.registerBlock("scalk_sensor", SculkSensorBlock::new, () -> Properties.ofFullCopy(Blocks.SCULK_SENSOR));
     public static final DeferredBlock<SculkShriekerBlock> SCALK_SHRIEKER =
-            BLOCKS.registerBlock("scalk_shrieker", SculkShriekerBlock::new, Properties.ofFullCopy(Blocks.SCULK_SHRIEKER));
+            BLOCKS.registerBlock("scalk_shrieker", SculkShriekerBlock::new, () -> Properties.ofFullCopy(Blocks.SCULK_SHRIEKER));
 
     // --- Abedul drenado
     public static final DeferredBlock<RotatedPillarBlock> DRAINED_BIRCH_LOG =
-            BLOCKS.registerBlock("drained_birch_log", RotatedPillarBlock::new, Properties.ofFullCopy(Blocks.BIRCH_LOG));
+            BLOCKS.registerBlock("drained_birch_log", RotatedPillarBlock::new, () -> Properties.ofFullCopy(Blocks.BIRCH_LOG));
     public static final DeferredBlock<TintedParticleLeavesBlock> DRAINED_BIRCH_LEAVES =
             BLOCKS.registerBlock("drained_birch_leaves", p -> new TintedParticleLeavesBlock(0.0F, p),
-                    Properties.ofFullCopy(Blocks.BIRCH_LEAVES));
+                    () -> Properties.ofFullCopy(Blocks.BIRCH_LEAVES));
 
     static {
         ITEMS.registerSimpleBlockItem(SCALK);
