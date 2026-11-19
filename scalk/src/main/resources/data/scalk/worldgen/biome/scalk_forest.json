@@ -129,7 +129,8 @@
       "minecraft:monster_room_deep"
     ],
     [
-      "scalk:scalk_patch"
+      "scalk:scalk_patch",
+      "scalk:scalk_pillar"
     ],
     [],
     [
