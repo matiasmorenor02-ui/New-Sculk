@@ -1,13 +1,16 @@
 package com.scalk;
 
 import com.scalk.worldgen.ScalkRegion;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.entity.BlockEntityTypes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import terrablender.api.MaterialRuleManager;
 import terrablender.api.Regions;
 
 @Mod(ScalkMod.MOD_ID)
@@ -27,18 +30,20 @@ public class ScalkMod {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() ->
-                Regions.register(new ScalkRegion(Identifier.fromNamespaceAndPath(MOD_ID, "overworld"), REGION_WEIGHT)));
+        event.enqueueWork(() -> {
+            Regions.register(new ScalkRegion(Identifier.fromNamespaceAndPath(MOD_ID, "overworld"), REGION_WEIGHT));
+            // Suelo del bioma: data/scalk/worldgen/material_rule/scalk_forest.json (solo afecta a biomas "scalk:")
+            MaterialRuleManager.addRules(MaterialRuleManager.RuleCategory.OVERWORLD, MOD_ID,
+                    ResourceKey.create(Registries.MATERIAL_RULE, Identifier.fromNamespaceAndPath(MOD_ID, "scalk_forest")));
+        });
     }
 
     /**
-     * Los bloques de scalk reutilizan las block entities de vanilla (catalizador, sensor, aullador),
-     * asi que solo hay que decirles que tambien son validos para esos tipos.
+     * El catalizador de scalk reutiliza la block entity del catalizador de vanilla,
+     * asi que solo hay que decirle que tambien es valido para ese tipo.
      */
     private void addBlockEntityBlocks(BlockEntityTypeAddBlocksEvent event) {
         event.modify(BlockEntityTypes.SCULK_CATALYST, ScalkBlocks.SCALK_CATALYST.get());
-        event.modify(BlockEntityTypes.SCULK_SENSOR, ScalkBlocks.SCALK_SENSOR.get());
-        event.modify(BlockEntityTypes.SCULK_SHRIEKER, ScalkBlocks.SCALK_SHRIEKER.get());
     }
 
     private void addCreativeTabItems(BuildCreativeModeTabContentsEvent event) {
@@ -47,10 +52,9 @@ public class ScalkMod {
             event.accept(ScalkBlocks.SCALK.get());
             event.accept(ScalkBlocks.SCALK_VEIN.get());
             event.accept(ScalkBlocks.SCALK_CATALYST.get());
-            event.accept(ScalkBlocks.SCALK_SENSOR.get());
-            event.accept(ScalkBlocks.SCALK_SHRIEKER.get());
             event.accept(ScalkBlocks.DRAINED_BIRCH_LOG.get());
             event.accept(ScalkBlocks.DRAINED_BIRCH_LEAVES.get());
+            event.accept(ScalkBlocks.DRAINED_DIRT.get());
         }
     }
 }

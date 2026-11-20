@@ -42,10 +42,7 @@ def recolor(name, stops, lo, hi, gamma=1.0, out_name=None):
 # --- bloques de scalk (sculk -> scalk)
 for n in ["sculk", "sculk_vein", "sculk_catalyst_bottom", "sculk_catalyst_side",
           "sculk_catalyst_side_bloom", "sculk_catalyst_top", "sculk_catalyst_top_bloom",
-          "sculk_sensor_bottom", "sculk_sensor_side", "sculk_sensor_top",
-          "sculk_sensor_tendril_active", "sculk_sensor_tendril_inactive",
-          "sculk_shrieker_bottom", "sculk_shrieker_side", "sculk_shrieker_top",
-          "sculk_shrieker_inner_top", "sculk_shrieker_can_summon_inner_top"]:
+          ]:
     recolor(n, SCALK, 14, 175, 0.85, out_name=n.replace("sculk", "scalk"))
 
 # --- madera y hojas drenadas

@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Block;
 
 /**
  * Indica si el codigo de propagacion del sculk (vanilla) esta corriendo "en modo scalk".
- * Los mixins lo usan para cambiar los bloques de sculk que vanilla coloca (sculk, vena, sensor, aullador)
+ * Los mixins lo usan para cambiar los bloques de sculk que vanilla coloca (sculk, vena, catalizador)
  * por sus equivalentes de scalk. Se activa cuando:
  *  - un catalizador de scalk actualiza sus cursores, o
  *  - se genera un parche de sculk en el bioma scalk_forest.

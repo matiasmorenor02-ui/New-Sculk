@@ -2,9 +2,8 @@
   "block.scalk.scalk": "Scalk",
   "block.scalk.scalk_vein": "Scalk Vein",
   "block.scalk.scalk_catalyst": "Scalk Catalyst",
-  "block.scalk.scalk_sensor": "Scalk Sensor",
-  "block.scalk.scalk_shrieker": "Scalk Shrieker",
   "block.scalk.drained_birch_log": "Drained Birch Log",
   "block.scalk.drained_birch_leaves": "Drained Birch Leaves",
+  "block.scalk.drained_dirt": "Drained Dirt",
   "biome.scalk.scalk_forest": "Scalk Birch Forest"
 }
